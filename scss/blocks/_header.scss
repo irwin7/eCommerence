@@ -1,0 +1,171 @@
+.site-header {}
+
+.header {
+  &__logo {
+
+    &-img {
+
+    }
+  }
+}
+
+.up-sect {
+  @include flex-center(space-between);
+  border-bottom: 1px solid #1515150d;
+
+  &__contact {
+    padding: 16px 0;
+
+    a{
+      &:not(:last-child){
+        margin-right: 33px;
+      }
+    }
+  }
+
+  &__link {
+    @include text;
+    text-decoration: none;
+  }
+
+  &__contacts {
+    @include text-blvk;
+    text-decoration: none;
+  }
+}
+
+.middle-sect {
+  padding: 40px 0;
+  @include flex-center(space-between);
+
+  &__form {
+    @include flex-center(space-between);
+    background: $color-f9;
+    border: 1px solid $color-d1;
+    box-sizing: border-box;
+    border-radius: 12px;
+    padding: 6px 16px;
+  }
+
+  &__category {
+    margin-right: 24px;
+    @include text-bold;
+    cursor: pointer;
+    @include trans;
+
+      &:hover{
+        color: $color-primary;
+      }
+      &:hover::after{
+        transform: rotate(180deg);
+      }
+      &::after{
+        @include down;
+        margin-left: 13px;
+      }
+  }
+
+  &__input {
+    padding: 5px 24px;
+    padding-right: 30px;
+    border: none;
+    border-left: 1px solid #1515150d;
+    background-color: transparent;
+
+      &:focus{
+        outline: 1px solid #1515150d;
+      }
+  }
+
+  &__btn{
+    @include bg;
+    background-image: url("../../media/img/search.svg");
+    border: none;
+    background-color: transparent;
+    width: 16px;
+    height: 16px;
+    cursor: pointer;
+    margin-left: 10px;
+
+    &:focus{
+      outline: 1px solid #15151541;
+    }
+  }
+
+  &__acc {
+    @include bg;
+    background-image: url("../../media/img/account.svg");
+    width: 24px;
+    height: 24px;
+
+    &:not(:last-child){
+      margin-right: 30px;
+    }
+    &:last-child{
+      background-image: url("../../media/img/cart.svg");
+    }
+  }
+}
+
+.hero__down{
+  background-color: $color-f9;
+}
+.down-sect {
+  padding: 16px 0;
+  padding-bottom: 6px;
+
+  &__list {
+    @include flex-center(space-between);
+  }
+
+  &__item {
+    @include flex-center(center);
+    position: relative;
+    padding-bottom: 10px;
+
+    &:hover .down-sect__link{
+      color: $color-primary;
+    }
+    &:hover::after{
+      transform: rotate(180deg);
+    }
+    &:hover .drop{
+      padding: 10px 20px;
+
+      &__list{
+       display: block;
+      }
+    }
+    &::after{
+      @include down;
+    }
+  }
+
+  &__link {
+    @include text-med;
+    text-decoration: none;
+  }
+}
+
+
+.drop {
+  position: absolute;
+  top: 100%;
+  background-color: $color-d1;
+  padding: 0;
+  overflow-y: hidden;
+  @include trans;
+
+  &__list {
+    display: none;
+  }
+  &__item {
+    &:not(:last-child){
+      margin-bottom: 10px;
+    }
+  }
+  &__link {
+    @include text-bold;
+    text-decoration: none;
+  }
+}

@@ -3,3 +3,113 @@
   margin: 0;
   list-style: none;
 }
+
+@mixin trans {
+  transition: all 0.4s ease;
+}
+
+@mixin text {
+  font-family: $font-open;
+  font-size: 12px;
+  line-height: 16px;
+  color: $color-primary;
+  @include trans;
+
+  &:hover{
+    color: $color-norm-black;
+  }
+}
+
+@mixin text-grn-bold {
+  font-family: $font-poppins;
+  font-weight: 600;
+  font-size: 12px;
+  line-height: 18px;
+  color: $color-primary;
+  @include trans;
+
+  &:hover{
+    color: $color-norm-black;
+  }
+}
+
+@mixin text-blvk {
+  font-family: $font-open;
+  font-size: 12px;
+  line-height: 16px;
+  color: $color-norm-black;
+  @include trans;
+
+  &:hover{
+    color: $color-primary;
+  }
+}
+
+@mixin text-med {
+  font-family: $font-poppins;
+  font-weight: 500;
+  font-size: 15px;
+  line-height: 22px;
+  color: $color-norm-black;
+  @include trans;
+
+  &:hover{
+    color: $color-primary;
+  }
+}
+
+@mixin text-bold {
+  font-family: $font-poppins;
+  font-weight: bold;
+  font-size: 15px;
+  line-height: 22px;
+  color: $color-norm-black;
+  @include trans;
+
+  &:hover{
+    color: $color-primary;
+  }
+}
+
+@mixin text-semi {
+  font-family: $font-poppins;
+  font-weight: 600;
+  font-size: 18px;
+  line-height: 27px;
+  color: $color-norm-black;
+  @include trans;
+
+  &:hover{
+    color: $color-primary;
+  }
+}
+
+@mixin bg {
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+
+@mixin down {
+  content: "";
+  display: inline-block;
+  width: 10px;
+  height: 6px;
+  @include bg;
+  background-image: url("../media/img/chevron-down.svg");
+  margin-left: 6px;
+  @include trans;
+}
+
+@mixin flex($jutsify) {
+  display: flex;
+  justify-content: $jutsify;
+  flex-flow: row wrap;
+}
+
+@mixin flex-center($jutsify) {
+  display: flex;
+  align-items: center;
+  justify-content: $jutsify;
+  flex-flow: row wrap;
+}

@@ -5,6 +5,7 @@
  * 1. Correct the line height in all browsers.
  * 2. Prevent adjustments of font size after orientation changes in iOS.
  */
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;500;600;700&family=Poppins:wght@400;500;600;700&display=swap");
 html {
   line-height: 1.15;
   /* 1 */
@@ -355,6 +356,8 @@ html {
 *::after {
   -webkit-box-sizing: inherit;
           box-sizing: inherit;
+  padding: 0;
+  margin: 0;
 }
 
 body {
@@ -378,6 +381,14 @@ img {
   height: auto;
 }
 
+ul {
+  list-style: none;
+}
+
+a {
+  display: inline-block;
+}
+
 /* VISUALLY-HIDDEN */
 .visually-hidden {
   position: absolute;
@@ -393,10 +404,311 @@ img {
 /* CONTAINER */
 .container {
   width: 100%;
-  max-width: 1200px;
-  padding-left: 30px;
-  padding-right: 30px;
+  max-width: 1240px;
+  padding-left: 20px;
+  padding-right: 20px;
   margin-left: auto;
   margin-right: auto;
+}
+
+.up-sect {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: row wrap;
+          flex-flow: row wrap;
+  border-bottom: 1px solid #1515150d;
+}
+
+.up-sect__contact {
+  padding: 16px 0;
+}
+
+.up-sect__contact a:not(:last-child) {
+  margin-right: 33px;
+}
+
+.up-sect__link {
+  font-family: "Open Sans", sans-serif;
+  font-size: 12px;
+  line-height: 16px;
+  color: #6a983c;
+  -webkit-transition: all 0.4s ease;
+  transition: all 0.4s ease;
+  text-decoration: none;
+}
+
+.up-sect__link:hover {
+  color: #151515;
+}
+
+.up-sect__contacts {
+  font-family: "Open Sans", sans-serif;
+  font-size: 12px;
+  line-height: 16px;
+  color: #151515;
+  -webkit-transition: all 0.4s ease;
+  transition: all 0.4s ease;
+  text-decoration: none;
+}
+
+.up-sect__contacts:hover {
+  color: #6a983c;
+}
+
+.middle-sect {
+  padding: 40px 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: row wrap;
+          flex-flow: row wrap;
+}
+
+.middle-sect__form {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: row wrap;
+          flex-flow: row wrap;
+  background: #f9f9f9;
+  border: 1px solid #d1d1d1;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  border-radius: 12px;
+  padding: 6px 16px;
+}
+
+.middle-sect__category {
+  margin-right: 24px;
+  font-family: "Poppins", sans-serif;
+  font-weight: bold;
+  font-size: 15px;
+  line-height: 22px;
+  color: #151515;
+  -webkit-transition: all 0.4s ease;
+  transition: all 0.4s ease;
+  cursor: pointer;
+  transition: all 0.4s ease;
+}
+
+.middle-sect__category:hover {
+  color: #6a983c;
+}
+
+.middle-sect__category:hover {
+  color: #6a983c;
+}
+
+.middle-sect__category:hover::after {
+  -webkit-transform: rotate(180deg);
+          transform: rotate(180deg);
+}
+
+.middle-sect__category::after {
+  content: "";
+  display: inline-block;
+  width: 10px;
+  height: 6px;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-image: url("../media/img/chevron-down.svg");
+  margin-left: 6px;
+  -webkit-transition: all 0.4s ease;
+  transition: all 0.4s ease;
+  margin-left: 13px;
+}
+
+.middle-sect__input {
+  padding: 5px 24px;
+  padding-right: 30px;
+  border: none;
+  border-left: 1px solid #1515150d;
+  background-color: transparent;
+}
+
+.middle-sect__input:focus {
+  outline: 1px solid #1515150d;
+}
+
+.middle-sect__btn {
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-image: url("../../media/img/search.svg");
+  border: none;
+  background-color: transparent;
+  width: 16px;
+  height: 16px;
+  cursor: pointer;
+  margin-left: 10px;
+}
+
+.middle-sect__btn:focus {
+  outline: 1px solid #15151541;
+}
+
+.middle-sect__acc {
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-image: url("../../media/img/account.svg");
+  width: 24px;
+  height: 24px;
+}
+
+.middle-sect__acc:not(:last-child) {
+  margin-right: 30px;
+}
+
+.middle-sect__acc:last-child {
+  background-image: url("../../media/img/cart.svg");
+}
+
+.hero__down {
+  background-color: #f9f9f9;
+}
+
+.down-sect {
+  padding: 16px 0;
+  padding-bottom: 6px;
+}
+
+.down-sect__list {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: row wrap;
+          flex-flow: row wrap;
+}
+
+.down-sect__item {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: row wrap;
+          flex-flow: row wrap;
+  position: relative;
+  padding-bottom: 10px;
+}
+
+.down-sect__item:hover .down-sect__link {
+  color: #6a983c;
+}
+
+.down-sect__item:hover::after {
+  -webkit-transform: rotate(180deg);
+          transform: rotate(180deg);
+}
+
+.down-sect__item:hover .drop {
+  padding: 10px 20px;
+}
+
+.down-sect__item:hover .drop__list {
+  display: block;
+}
+
+.down-sect__item::after {
+  content: "";
+  display: inline-block;
+  width: 10px;
+  height: 6px;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-image: url("../media/img/chevron-down.svg");
+  margin-left: 6px;
+  -webkit-transition: all 0.4s ease;
+  transition: all 0.4s ease;
+}
+
+.down-sect__link {
+  font-family: "Poppins", sans-serif;
+  font-weight: 500;
+  font-size: 15px;
+  line-height: 22px;
+  color: #151515;
+  -webkit-transition: all 0.4s ease;
+  transition: all 0.4s ease;
+  text-decoration: none;
+}
+
+.down-sect__link:hover {
+  color: #6a983c;
+}
+
+.drop {
+  position: absolute;
+  top: 100%;
+  background-color: #d1d1d1;
+  padding: 0;
+  overflow-y: hidden;
+  -webkit-transition: all 0.4s ease;
+  transition: all 0.4s ease;
+}
+
+.drop__list {
+  display: none;
+}
+
+.drop__item:not(:last-child) {
+  margin-bottom: 10px;
+}
+
+.drop__link {
+  font-family: "Poppins", sans-serif;
+  font-weight: bold;
+  font-size: 15px;
+  line-height: 22px;
+  color: #151515;
+  -webkit-transition: all 0.4s ease;
+  transition: all 0.4s ease;
+  text-decoration: none;
+}
+
+.drop__link:hover {
+  color: #6a983c;
 }
 /*# sourceMappingURL=main.css.map */
