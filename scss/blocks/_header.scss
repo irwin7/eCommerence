@@ -1,13 +1,11 @@
 .up-sect {
   @include flex-center(space-between);
   border-bottom: 1px solid #1515150d;
-  position: fixed;
-  top: 0;
-  left: 0;
-  right: 0;
   background-color: $bg-color;
-  z-index: 99;
+  position: relative;
+  margin: 0 -20px;
   padding: 0 20px;
+  z-index: 99;
 
   &__contact {
     padding: 16px 0;
@@ -79,7 +77,6 @@
 
 .middle-sect {
   padding: 40px 0;
-  padding-top: 90px;
   @include flex-center(space-between);
 
   &__form {
@@ -254,7 +251,7 @@
   .down-sect {
     padding: 16px 30px;
     padding-top: 60px;
-    position: absolute;
+    position: fixed;
     right: 0;
     top: 0;
     max-height: 720px;
@@ -311,6 +308,13 @@
       &:not(:last-child){
         margin-right: 10px;
       }
+    }
+  }
+}
+@media only screen and (max-width : 300px){
+  .up-sect{
+    .tel{
+      display: none;
     }
   }
 }

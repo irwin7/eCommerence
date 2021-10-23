@@ -371,7 +371,6 @@ body {
   height: 100%;
   padding: 0;
   margin: 0;
-  overflow-x: hidden;
   font-family: "Poppins", sans-serif;
   background-color: #fff;
 }
@@ -426,13 +425,11 @@ a {
       -ms-flex-flow: row wrap;
           flex-flow: row wrap;
   border-bottom: 1px solid #1515150d;
-  position: fixed;
-  top: 0;
-  left: 0;
-  right: 0;
   background-color: #fff;
-  z-index: 99;
+  position: relative;
+  margin: 0 -20px;
   padding: 0 20px;
+  z-index: 99;
 }
 
 .up-sect__contact {
@@ -529,7 +526,6 @@ a {
 
 .middle-sect {
   padding: 40px 0;
-  padding-top: 90px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -814,7 +810,7 @@ a {
   .down-sect {
     padding: 16px 30px;
     padding-top: 60px;
-    position: absolute;
+    position: fixed;
     right: 0;
     top: 0;
     max-height: 720px;
@@ -882,6 +878,12 @@ a {
   }
   .middle-sect__acc:not(:last-child) {
     margin-right: 10px;
+  }
+}
+
+@media only screen and (max-width: 300px) {
+  .up-sect .tel {
+    display: none;
   }
 }
 /*# sourceMappingURL=main.css.map */
