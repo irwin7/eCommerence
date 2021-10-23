@@ -372,7 +372,7 @@ body {
   padding: 0;
   margin: 0;
   overflow-x: hidden;
-  font-family: "Arial", sans-serif;
+  font-family: "Poppins", sans-serif;
   background-color: #fff;
 }
 
@@ -426,6 +426,13 @@ a {
       -ms-flex-flow: row wrap;
           flex-flow: row wrap;
   border-bottom: 1px solid #1515150d;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  background-color: #fff;
+  z-index: 99;
+  padding: 0 20px;
 }
 
 .up-sect__contact {
@@ -464,8 +471,65 @@ a {
   color: #6a983c;
 }
 
+.up-sect .burger {
+  display: none;
+  height: 20px;
+  position: relative;
+  cursor: pointer;
+}
+
+.up-sect .burger__menu {
+  display: inline-block;
+  width: 30px;
+  height: 2px;
+  background-color: #151515;
+  -webkit-transition: all 0.4s ease;
+  transition: all 0.4s ease;
+}
+
+.up-sect .burger__menu::before {
+  content: "";
+  display: inline-block;
+  position: relative;
+  width: 30px;
+  height: 2px;
+  background-color: #151515;
+  top: -1px;
+  -webkit-transition: all 0.4s ease;
+  transition: all 0.4s ease;
+}
+
+.up-sect .burger__menu::after {
+  content: "";
+  display: inline-block;
+  position: relative;
+  background-color: #151515;
+  width: 30px;
+  height: 2px;
+  bottom: 8px;
+  -webkit-transition: all 0.4s ease;
+  transition: all 0.4s ease;
+}
+
+.up-sect .burger .open.burger__menu {
+  background-color: transparent;
+}
+
+.up-sect .burger .open.burger__menu::before {
+  -webkit-transform: rotate(-45deg);
+          transform: rotate(-45deg);
+  top: -1px;
+}
+
+.up-sect .burger .open.burger__menu::after {
+  -webkit-transform: rotate(45deg);
+          transform: rotate(45deg);
+  bottom: 19px;
+}
+
 .middle-sect {
   padding: 40px 0;
+  padding-top: 90px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -583,11 +647,24 @@ a {
 }
 
 .middle-sect__acc:not(:last-child) {
-  margin-right: 30px;
+  margin-right: 20px;
 }
 
 .middle-sect__acc:last-child {
   background-image: url("../../media/img/cart.svg");
+}
+
+.middle-sect__srch {
+  width: 24px;
+  height: 24px;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-image: url("../../media/img/search.svg");
+  background-color: transparent;
+  border: none;
+  margin-right: 20px;
+  display: none;
 }
 
 .hero__down {
@@ -710,5 +787,95 @@ a {
 
 .drop__link:hover {
   color: #6a983c;
+}
+
+@media only screen and (max-width: 860px) {
+  .middle-sect__form {
+    display: none;
+  }
+  .middle-sect__srch {
+    display: inline-block;
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  .open.down-sect {
+    right: 0;
+  }
+  .up-sect {
+    max-width: 720px;
+  }
+  .up-sect__contact a:not(:last-child) {
+    margin-right: 10px;
+  }
+  .up-sect .burger {
+    display: block;
+  }
+  .down-sect {
+    padding: 16px 30px;
+    padding-top: 60px;
+    position: absolute;
+    right: 0;
+    top: 0;
+    max-height: 720px;
+    height: calc(100% + 50px);
+    max-width: 320px;
+    width: 100%;
+    background-color: #fff;
+    -webkit-box-shadow: -9px 2px 12px 0px #34303045;
+            box-shadow: -9px 2px 12px 0px #34303045;
+    -webkit-transition: all 0.4s ease;
+    transition: all 0.4s ease;
+    right: -100%;
+  }
+  .down-sect .up-sect__navbar {
+    display: inline-block;
+    margin-bottom: 35px;
+  }
+  .down-sect__list {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-flow: row wrap;
+            flex-flow: row wrap;
+    -ms-flex-direction: column;
+        flex-direction: column;
+    width: 100%;
+  }
+  .down-sect__item {
+    width: 100%;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+  }
+  .up-sect__navbar {
+    display: none;
+  }
+}
+
+@media only screen and (max-width: 548px) {
+  .up-sect .email {
+    display: none;
+  }
+}
+
+@media only screen and (max-width: 358px) {
+  .header__logo {
+    width: 140px;
+  }
+  .middle-sect__srch {
+    margin-right: 10px;
+  }
+  .middle-sect__acc:not(:last-child) {
+    margin-right: 10px;
+  }
 }
 /*# sourceMappingURL=main.css.map */
