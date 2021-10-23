@@ -862,12 +862,18 @@ a {
 }
 
 @media only screen and (max-width: 548px) {
+  .up-sect {
+    max-width: 500px;
+  }
   .up-sect .email {
     display: none;
   }
 }
 
 @media only screen and (max-width: 358px) {
+  .up-sect {
+    max-width: 300px;
+  }
   .header__logo {
     width: 140px;
   }
