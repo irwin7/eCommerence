@@ -1,0 +1,52 @@
+.btn{
+  display: inline-block;
+  @include trans;
+  @include text-bold;
+  border: 2px solid transparent;
+  border-radius: 12px;
+  text-decoration: none;
+}
+
+.with-bg{
+  background-color: $color-primary;
+  border-color: #46760a;
+  padding: 6.5px 16px;
+  color: $white;
+
+  &:hover{
+    color: $color-primary;
+    background-color: $bg-color;
+  }
+}
+.with-arrow{
+  padding: 13px 16px;
+  background-color: $color-f5;
+
+  &:hover{
+    color: $color-primary;
+  }
+  &:hover span{
+    color: $color-primary;
+  }
+  span{
+    display: inline-block;
+    font-size: 10px;
+    color: $color-norm-black;
+    vertical-align: middle;
+    margin-left: 6px;
+    @include trans;
+  }
+}
+
+.border-arrow{
+  border-color: $color-primary;
+  background-color: transparent;
+
+  span{
+    color: $color-primary;
+  }
+  &:hover{
+    color: $color-primary;
+    background-color: $bg-color;
+  }
+}

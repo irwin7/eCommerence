@@ -27,10 +27,6 @@
   line-height: 18px;
   color: $color-primary;
   @include trans;
-
-  &:hover{
-    color: $color-norm-black;
-  }
 }
 
 @mixin text-blvk {
@@ -39,10 +35,6 @@
   line-height: 16px;
   color: $color-norm-black;
   @include trans;
-
-  &:hover{
-    color: $color-primary;
-  }
 }
 
 @mixin text-med {
@@ -52,10 +44,6 @@
   line-height: 22px;
   color: $color-norm-black;
   @include trans;
-
-  &:hover{
-    color: $color-primary;
-  }
 }
 
 @mixin text-bold {
@@ -65,10 +53,6 @@
   line-height: 22px;
   color: $color-norm-black;
   @include trans;
-
-  &:hover{
-    color: $color-primary;
-  }
 }
 
 @mixin text-semi {
@@ -78,10 +62,15 @@
   line-height: 27px;
   color: $color-norm-black;
   @include trans;
+}
 
-  &:hover{
-    color: $color-primary;
-  }
+@mixin text-semi-33 {
+  font-family: $font-poppins;
+  font-weight: 600;
+  font-size: 22px;
+  line-height: 33px;
+  color: $color-norm-black;
+  @include trans;
 }
 
 @mixin bg {

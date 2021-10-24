@@ -165,6 +165,9 @@
   padding: 16px 0;
   padding-bottom: 6px;
 
+  .up-sect__navbar{
+    display: none;
+  }
   &__list {
     @include flex-center(space-between);
   }
@@ -197,8 +200,6 @@
     text-decoration: none;
   }
 }
-
-
 .drop {
   position: absolute;
   top: 100%;
@@ -315,7 +316,6 @@
   .up-sect{
     .tel{
       display: none;
-      
     }
   }
 }

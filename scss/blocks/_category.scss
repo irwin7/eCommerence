@@ -1,0 +1,25 @@
+.category {
+
+  &__headline {
+  @include text-semi;
+  margin-bottom: 15px;
+  }
+  &__list {
+    margin-bottom: 48px;
+  }
+  &__item {
+    &:not(:last-child){
+      margin-bottom: 12px;
+    }
+    &:hover .category__link{
+      color: $color-norm-black;
+    }
+  }
+  &__link {
+    font-family: $font-open;
+    font-size: 14px;
+    line-height: 19px;
+    color: $color-primary;
+    @include trans;
+  }
+}
