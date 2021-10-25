@@ -1,0 +1,212 @@
+.fruits-hero {
+  padding: 16px 0;
+  margin-bottom: 16px;
+
+  &__location {
+    @include flex-center(start);
+  }
+  &__location-item {
+
+    &:not(:last-child) a{
+      color: $color-a9;
+      margin-right: 8px;
+    }
+    &:not(:last-child)::after{
+        content: "/";
+        display: inline-block;
+        margin-right: 8px;
+        @include text-blvk;
+        color: $color-d1;
+    }
+  }
+      
+  &__location-link {
+    @include text-blvk;
+    text-decoration: none;
+  }
+  &__up {
+    @include flex-center(space-between);
+    padding: 8px 0;
+  }
+  &__title {
+    font-family: $font-poppins;
+    font-weight: 600;
+    font-size: 32px;
+    line-height: 48px;
+    color: $color-norm-black;
+  }
+  &__layouts {
+    display: flex;
+  }
+  &__layout {
+    border: none;
+    background-color: transparent;
+    display: flex;
+    align-items: center;
+    @include text;
+    color: $color-a9;
+    cursor: pointer;
+
+    
+    &.active{
+      color: $color-norm-black;
+    }
+    &:not(:last-child){
+      margin-right: 24px;
+    }
+    &:not(:last-child)::before{
+      content: "";
+      display: inline-block;
+      background-image: url("../../media/img/ic-layout-square-grid.svg");
+      width: 16px;
+      height: 16px;
+      @include bg;
+      vertical-align: middle;
+      margin-right: 5px;
+    }
+    &:nth-child(2)::before{
+      background-image: url("../../media/img/ic-layout-sections.svg");
+    }
+    &:last-child span{
+      @include text-grn-bold;
+      display: inline-block;
+      padding: 0 8px;
+      background-color: #f4f8ec;
+      margin-right: 5px;
+      border-radius: 12px;
+    }
+  }
+  .filter {
+    display: flex;
+    align-items: center;
+    flex-flow: row wrap;
+    
+    &__div {
+      display: flex;
+      flex-flow: row wrap;
+      align-items: center;
+      padding: 9px 16px;
+      background: $color-f9;
+      border: 1px solid #d1d1d1;
+      border-radius: 12px;
+      margin-bottom: 15px;
+
+      &:last-child .filter__checkbox-label{
+        padding-right: 24px;
+        border-right: 1px solid $color-d1;
+      }
+      &:last-child .filter__checkbox-label::after{
+       content: "12";
+      }
+      &:not(:last-child){
+        margin-right: 16px;
+      }
+    }
+    &__radio {
+      opacity: 0;
+    }
+    &__radio-label {
+      display: flex;
+      align-items: center;
+      cursor: pointer;
+
+      .filter__radio:checked ~ span{
+        border: 8px solid $color-norm-black;
+      }
+      &:not(:last-child){
+        margin-right: 16px;
+      }
+      span{
+        display: inline-block;
+        width: 24px;
+        height: 24px;
+        border-radius: 50%;
+        border: 1px solid #dbdbdb;
+        margin-right: 8px;
+      }
+    }
+    &__checkbox-label {
+      display: flex;
+      align-items: center;
+      @include text;
+      color: $color-norm-black;
+      position: relative;
+      cursor: pointer;
+
+      &::before{
+        content: "";
+        display: inline-block;
+        width: 24px;
+        height: 24px;
+        position: relative;
+        top: 0;
+        left: 0;
+        margin-right: 10px;
+        background-color: $white;
+        border: 1.5px solid #d1d1d1;
+        border-radius: 5px;
+        cursor: pointer;
+        @include trans;
+        transition-timing-function: 0.1s;
+      }
+      &::after{
+        content: "Nbm";
+        position: relative;
+        top: 0;
+        right: 0;
+        display: inline-block;
+        padding: 0 8px;
+        margin-left: 10px;
+        border: 1px solid #ebebeb;
+        border-radius: 12px;
+        @include text-grn-bold;
+        color: $color-norm-black;
+      }
+    }
+    &__checkbox{
+      position: relative;
+      width: 24px;
+      height: 24px;
+      cursor: pointer;
+      display: none;
+
+      &:checked ~ .filter__checkbox-label::before{
+        background-color: #6a983c;
+        background-image: url("../../media/img/check.svg");
+        @include bg;
+        border: 1.5px solid #46760a;
+      }
+    }
+    &__select{
+      border: none;
+      background-color: transparent;
+      cursor: pointer;
+      margin-left: 24px;
+      padding: 0;
+
+      &:focus,
+      &:active{
+        outline: 1px solid #d1d1d1;
+      }
+    }
+  }
+}
+
+@media only screen and (max-width: 368px) {
+  .fruits-hero{
+    &__up{
+      margin-bottom: 25px;
+    }
+    .filter__div{
+      display: inline-block;
+    }
+  }
+  .fruits-hero{
+    .filter__div:last-child{
+      display: flex;
+    }
+  }
+  .filter__radio-label:not(:last-child){
+    margin-bottom: 5px;
+  }
+}

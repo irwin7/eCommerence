@@ -506,6 +506,13 @@ a {
   background-color: #fff;
 }
 
+.header__up {
+  border-bottom: 1px solid #1515150d;
+  background-color: #fff;
+  position: relative;
+  z-index: 101;
+}
+
 .up-sect {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -520,12 +527,6 @@ a {
   -webkit-box-direction: normal;
       -ms-flex-flow: row wrap;
           flex-flow: row wrap;
-  border-bottom: 1px solid #1515150d;
-  background-color: #fff;
-  position: relative;
-  margin: 0 -20px;
-  padding: 0 20px;
-  z-index: 99;
 }
 
 .up-sect__contact {
@@ -898,7 +899,7 @@ a {
     right: 0;
     top: 0;
     max-height: 720px;
-    height: calc(100% + 50px);
+    height: 100vh;
     max-width: 320px;
     width: 100%;
     background-color: #fff;
@@ -907,6 +908,7 @@ a {
     -webkit-transition: all 0.4s ease;
     transition: all 0.4s ease;
     right: -100%;
+    z-index: 99;
   }
   .down-sect .up-sect__navbar {
     display: inline-block;
@@ -1248,6 +1250,331 @@ a {
   }
   .product__item:not(:last-child) {
     margin-bottom: 25px;
+  }
+}
+
+.fruits-hero {
+  padding: 16px 0;
+  margin-bottom: 16px;
+}
+
+.fruits-hero__location {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: start;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: row wrap;
+          flex-flow: row wrap;
+}
+
+.fruits-hero__location-item:not(:last-child) a {
+  color: #a9a9a9;
+  margin-right: 8px;
+}
+
+.fruits-hero__location-item:not(:last-child)::after {
+  content: "/";
+  display: inline-block;
+  margin-right: 8px;
+  font-family: "Open Sans", sans-serif;
+  font-size: 12px;
+  line-height: 16px;
+  color: #151515;
+  -webkit-transition: all 0.4s ease;
+  transition: all 0.4s ease;
+  color: #d1d1d1;
+}
+
+.fruits-hero__location-link {
+  font-family: "Open Sans", sans-serif;
+  font-size: 12px;
+  line-height: 16px;
+  color: #151515;
+  -webkit-transition: all 0.4s ease;
+  transition: all 0.4s ease;
+  text-decoration: none;
+}
+
+.fruits-hero__up {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: row wrap;
+          flex-flow: row wrap;
+  padding: 8px 0;
+}
+
+.fruits-hero__title {
+  font-family: "Poppins", sans-serif;
+  font-weight: 600;
+  font-size: 32px;
+  line-height: 48px;
+  color: #151515;
+}
+
+.fruits-hero__layouts {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.fruits-hero__layout {
+  border: none;
+  background-color: transparent;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  font-family: "Open Sans", sans-serif;
+  font-size: 12px;
+  line-height: 16px;
+  color: #6a983c;
+  -webkit-transition: all 0.4s ease;
+  transition: all 0.4s ease;
+  color: #a9a9a9;
+  cursor: pointer;
+}
+
+.fruits-hero__layout:hover {
+  color: #151515;
+}
+
+.fruits-hero__layout.active {
+  color: #151515;
+}
+
+.fruits-hero__layout:not(:last-child) {
+  margin-right: 24px;
+}
+
+.fruits-hero__layout:not(:last-child)::before {
+  content: "";
+  display: inline-block;
+  background-image: url("../../media/img/ic-layout-square-grid.svg");
+  width: 16px;
+  height: 16px;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+  vertical-align: middle;
+  margin-right: 5px;
+}
+
+.fruits-hero__layout:nth-child(2)::before {
+  background-image: url("../../media/img/ic-layout-sections.svg");
+}
+
+.fruits-hero__layout:last-child span {
+  font-family: "Poppins", sans-serif;
+  font-weight: 600;
+  font-size: 12px;
+  line-height: 18px;
+  color: #6a983c;
+  -webkit-transition: all 0.4s ease;
+  transition: all 0.4s ease;
+  display: inline-block;
+  padding: 0 8px;
+  background-color: #f4f8ec;
+  margin-right: 5px;
+  border-radius: 12px;
+}
+
+.fruits-hero .filter {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: row wrap;
+          flex-flow: row wrap;
+}
+
+.fruits-hero .filter__div {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: row wrap;
+          flex-flow: row wrap;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 9px 16px;
+  background: #f9f9f9;
+  border: 1px solid #d1d1d1;
+  border-radius: 12px;
+  margin-bottom: 15px;
+}
+
+.fruits-hero .filter__div:last-child .filter__checkbox-label {
+  padding-right: 24px;
+  border-right: 1px solid #d1d1d1;
+}
+
+.fruits-hero .filter__div:last-child .filter__checkbox-label::after {
+  content: "12";
+}
+
+.fruits-hero .filter__div:not(:last-child) {
+  margin-right: 16px;
+}
+
+.fruits-hero .filter__radio {
+  opacity: 0;
+}
+
+.fruits-hero .filter__radio-label {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  cursor: pointer;
+}
+
+.fruits-hero .filter__radio-label .filter__radio:checked ~ span {
+  border: 8px solid #151515;
+}
+
+.fruits-hero .filter__radio-label:not(:last-child) {
+  margin-right: 16px;
+}
+
+.fruits-hero .filter__radio-label span {
+  display: inline-block;
+  width: 24px;
+  height: 24px;
+  border-radius: 50%;
+  border: 1px solid #dbdbdb;
+  margin-right: 8px;
+}
+
+.fruits-hero .filter__checkbox-label {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  font-family: "Open Sans", sans-serif;
+  font-size: 12px;
+  line-height: 16px;
+  color: #6a983c;
+  -webkit-transition: all 0.4s ease;
+  transition: all 0.4s ease;
+  color: #151515;
+  position: relative;
+  cursor: pointer;
+}
+
+.fruits-hero .filter__checkbox-label:hover {
+  color: #151515;
+}
+
+.fruits-hero .filter__checkbox-label::before {
+  content: "";
+  display: inline-block;
+  width: 24px;
+  height: 24px;
+  position: relative;
+  top: 0;
+  left: 0;
+  margin-right: 10px;
+  background-color: #fff;
+  border: 1.5px solid #d1d1d1;
+  border-radius: 5px;
+  cursor: pointer;
+  -webkit-transition: all 0.4s ease;
+  transition: all 0.4s ease;
+  -webkit-transition-timing-function: 0.1s;
+          transition-timing-function: 0.1s;
+}
+
+.fruits-hero .filter__checkbox-label::after {
+  content: "Nbm";
+  position: relative;
+  top: 0;
+  right: 0;
+  display: inline-block;
+  padding: 0 8px;
+  margin-left: 10px;
+  border: 1px solid #ebebeb;
+  border-radius: 12px;
+  font-family: "Poppins", sans-serif;
+  font-weight: 600;
+  font-size: 12px;
+  line-height: 18px;
+  color: #6a983c;
+  -webkit-transition: all 0.4s ease;
+  transition: all 0.4s ease;
+  color: #151515;
+}
+
+.fruits-hero .filter__checkbox {
+  position: relative;
+  width: 24px;
+  height: 24px;
+  cursor: pointer;
+  display: none;
+}
+
+.fruits-hero .filter__checkbox:checked ~ .filter__checkbox-label::before {
+  background-color: #6a983c;
+  background-image: url("../../media/img/check.svg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+  border: 1.5px solid #46760a;
+}
+
+.fruits-hero .filter__select {
+  border: none;
+  background-color: transparent;
+  cursor: pointer;
+  margin-left: 24px;
+  padding: 0;
+}
+
+.fruits-hero .filter__select:focus, .fruits-hero .filter__select:active {
+  outline: 1px solid #d1d1d1;
+}
+
+@media only screen and (max-width: 368px) {
+  .fruits-hero__up {
+    margin-bottom: 25px;
+  }
+  .fruits-hero .filter__div {
+    display: inline-block;
+  }
+  .fruits-hero .filter__div:last-child {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
+  .filter__radio-label:not(:last-child) {
+    margin-bottom: 5px;
   }
 }
 /*# sourceMappingURL=main.css.map */

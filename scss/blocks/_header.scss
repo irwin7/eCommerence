@@ -1,11 +1,11 @@
-.up-sect {
-  @include flex-center(space-between);
+.header__up{
   border-bottom: 1px solid #1515150d;
   background-color: $bg-color;
   position: relative;
-  margin: 0 -20px;
-  padding: 0 20px;
-  z-index: 99;
+  z-index: 101;
+}
+.up-sect {
+  @include flex-center(space-between);
 
   &__contact {
     padding: 16px 0;
@@ -256,13 +256,14 @@
     right: 0;
     top: 0;
     max-height: 720px;
-    height: calc(100% + 50px);
+    height: 100vh;
     max-width: 320px;
     width: 100%;
     background-color: $bg-color;
     box-shadow: -9px 2px 12px 0px #34303045;
     @include trans;
     right: -100%;
+    z-index: 99;
   
     .up-sect__navbar{
       display: inline-block;
