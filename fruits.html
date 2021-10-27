@@ -165,13 +165,13 @@
             <div class="fruits-hero__up">
               <h1 class="fruits-hero__title">Fruit and vegetables</h1>
               <div class="fruits-hero__layouts">
-                <button class="fruits-hero__layout active"><span></span>Grid view</button>
-                <button class="fruits-hero__layout"><span></span>List view</button>
+                <button class="fruits-hero__layout grid"><span></span>Grid view</button>
+                <button class="fruits-hero__layout active list"><span></span>List view</button>
                 <button class="fruits-hero__layout"><span>117</span>Products</button>
               </div>
             </div>
-            <div class="fruits-hero__filters filters">
-              <form class="filters__form filter" action="https://echo.htmlacademy.ru/">
+            <div class="fruits-hero__filters">
+              <form class="fruits-hero__filters-form filter" action="https://echo.htmlacademy.ru/">
                 <div class="filter__div">
                   <label class="filter__radio-label">
                     <input class="filter__radio" type="radio" name="radio" id="radio">
@@ -200,13 +200,398 @@
                     <option value="product">product</option>
                   </select>
                 </div>
+                <div class="filter__open-div">
+                  <a class="filter__open-btn btn with-bg" href="#">Filters</a>
+                </div>
               </form>
+              <div class="fruits-hero__selected-filters selected">
+              <p class="selected__text">Applied filtres:</p>
+              <a class="selected__link" href="#">Selected Filtre <span><i class='bx bx-x'></i></span></a>
+              <a class="selected__link" href="#">Selected Filtre <span><i class='bx bx-x'></i></span></a>
+              </div>
             </div>
           </div>
         </div>
       </div>
     </section>
-    
+    <section id="products">
+      <div class="container">
+        <div class="products">
+          <div class="products__filters filters">
+            <div class="filters__box">
+              <div class="filters__box-btns">
+                <h3 class="filters__title">Categories</h3>
+                <span class="filters__close">x</span>
+              </div>
+              <ul class="filters__list">
+                <li class="filters__item">
+                  <a class="filters__link" href="#">Category name</a>
+                  <span class="filters__span">77</span>
+                </li>
+                <li class="filters__item">
+                  <a class="filters__link" href="#">Category name</a>
+                  <span class="filters__span">77</span>
+                </li>
+                <li class="filters__item">
+                  <a class="filters__link" href="#">Category name</a>
+                  <span class="filters__span">77</span>
+                </li>
+                <li class="filters__item">
+                  <a class="filters__link" href="#">Category name</a>
+                  <span class="filters__span">77</span>
+                </li>
+              </ul>
+            </div>
+            <div class="filters__box">
+              <h3 class="filters__title">Brands</h3>
+              <ul class="filters__list">
+                <li class="filters__item">
+                  <input class="filters__input brand-checkbox" type="checkbox" name="checkbox" id="brand1">
+                  <label class="filters__label brand-label" for="brand1">Filtre by brand item</label>
+                </li>
+                <li class="filters__item">
+                  <input class="filters__input brand-checkbox" type="checkbox" name="checkbox" id="brand2">
+                  <label class="filters__label brand-label" for="brand2">Filtre by brand item</label>
+                </li>
+                <li class="filters__item">
+                  <input class="filters__input brand-checkbox" type="checkbox" name="checkbox" id="brand3">
+                  <label class="filters__label brand-label" for="brand3">Filtre by brand item</label>
+                </li>
+                <li class="filters__item">
+                  <input class="filters__input brand-checkbox" type="checkbox" name="checkbox" id="brand4">
+                  <label class="filters__label brand-label" for="brand4">Filtre by brand item</label>
+                </li>
+              </ul>
+            </div>
+            <div class="filters__box">
+              <h3 class="filters__title">Rating</h3>
+              <ul class="filters__list">
+                <li class="filters__item">
+                  <input class="filters__input stars-checbox" type="checkbox" name="checkbox" id="rating1">
+                  <label class="filters__label stars-label" for="rating1">
+                    <span><i class='bx bxs-star' ></i></span>
+                    <span><i class='bx bxs-star' ></i></span>
+                    <span><i class='bx bxs-star' ></i></span>
+                    <span><i class='bx bxs-star' ></i></span>
+                    <span><i class='bx bxs-star' ></i></span>
+                  </label>
+                </li>
+                <li class="filters__item">
+                  <input class="filters__input stars-checbox" type="checkbox" name="checkbox" id="rating2">
+                  <label class="filters__label stars-label" for="rating2">
+                    <span><i class='bx bxs-star' ></i></span>
+                    <span><i class='bx bxs-star' ></i></span>
+                    <span><i class='bx bxs-star' ></i></span>
+                    <span><i class='bx bxs-star' ></i></span>
+                    <span><i class='bx bx-star' ></i></span>
+                  </label>
+                </li>
+                <li class="filters__item">
+                  <input class="filters__input stars-checbox" type="checkbox" name="checkbox" id="rating3">
+                  <label class="filters__label stars-label" for="rating3">
+                    <span><i class='bx bxs-star' ></i></span>
+                    <span><i class='bx bxs-star' ></i></span>
+                    <span><i class='bx bxs-star' ></i></span>
+                    <span><i class='bx bx-star' ></i></span>
+                    <span><i class='bx bx-star' ></i></span>
+                  </label>
+                </li>
+                <li class="filters__item">
+                  <input class="filters__input stars-checbox" type="checkbox" name="checkbox" id="rating4">
+                  <label class="filters__label stars-label" for="rating4">
+                    <span><i class='bx bxs-star' ></i></span>
+                    <span><i class='bx bxs-star' ></i></span>
+                    <span><i class='bx bx-star' ></i></span>
+                    <span><i class='bx bx-star' ></i></span>
+                    <span><i class='bx bx-star' ></i></span>
+                  </label>
+                </li>
+                <li class="filters__item">
+                  <input class="filters__input stars-checbox" type="checkbox" name="checkbox" id="rating5">
+                  <label class="filters__label stars-label" for="rating5">
+                    <span><i class='bx bxs-star' ></i></span>
+                    <span><i class='bx bx-star' ></i></span>
+                    <span><i class='bx bx-star' ></i></span>
+                    <span><i class='bx bx-star' ></i></span>
+                    <span><i class='bx bx-star' ></i></span>
+                  </label>
+                </li>
+              </ul>
+            </div>
+            <div class="filters__box">
+              <h3 class="filters__title">Price</h3>
+              <div class="filters__price-div">
+                <span class="filters__price-controls"></span>
+                <span class="filters__wrapper"></span>
+                <span class="filters__price-controls"></span>
+              </div>
+              <div class="filters__inputs">
+                <div class="filters__inputs-div">
+                  <label for="min-price">Min</label>
+                  <input class="filters__input min-max" placeholder="0" type="number" name="price" id="min-price">
+                </div>
+                <span class="filters__minus-span">-</span>
+                <div class="filters__inputs-div">
+                  <label for="max-price">Max</label>
+                  <input class="filters__input min-max" placeholder="0" type="number" name="price" id="max-price">
+                </div>
+              </div>
+              <div class="filters__btns">
+                <button class="filters__btn btn with-bg" type="submit">Aplly</button>
+                <button class="filters__btn btn reset" type="filters__btn">Reset</button>
+              </div>
+            </div>
+          </div>
+          <ul class="products__list">
+            <li class="products__item product-box">
+              <div class="product-box__imgs">
+                <img class="product-box__img" src="" alt="">
+              </div>
+              <div class="product-box__about">
+                <div class="product-box__inner-box inner-box">
+                  <div class="inner-box__up">
+                    <p class="inner-box__title">Product title</p>
+                    <p class="inner-box__des">Space for a small product description </p>
+                    <div class="inner-box__rating">
+                      <span><i class='bx bxs-star' ></i></span>
+                      <span><i class='bx bxs-star' ></i></span>
+                      <span><i class='bx bx-star' ></i></span>
+                      <span><i class='bx bx-star' ></i></span>
+                      <span><i class='bx bx-star' ></i></span>
+                    </div>
+                  </div>
+                  <div class="inner-box__down">
+                    <ul class="inner-box__static-titles">
+                      <li class="inner-box__item"><p class="inner-box__static-title">Fresheness</p></li>
+                      <li class="inner-box__item"><p class="inner-box__static-title">Farm</p></li>
+                      <li class="inner-box__item"><p class="inner-box__static-title">Delivery</p></li>
+                      <li class="inner-box__item"><p class="inner-box__static-title">Stock</p></li>
+                    </ul>
+                    <ul class="inner-box__static-texts">
+                      <li class="inner-box__item"><p class="inner-box__static-text"><span>New</span> (Extra fresh)</p></li>
+                      <li class="inner-box__item"><p class="inner-box__static-text">Grocery Tarm Fields</p></li>
+                      <li class="inner-box__item"><p class="inner-box__static-text">Europe</p></li>
+                      <li class="inner-box__item"><p class="inner-box__static-text"><span>320 pcs</span></p></li>
+                    </ul>
+                  </div>
+                </div>
+                <div class="product-box__prices cost">
+                  <div class="cost__prices">
+                    <p class="cost__price">36.99 USD</p>
+                    <p class="cost__discount">48.56</p>
+                  </div>
+                  <div class="cost__shipping">
+                    <p class="cost__shipping-type">Free Shipping</p>
+                    <p class="cost__shipping-priod">Delivery in 1 day</p>
+                  </div>
+                  <div class="cost__btns">
+                    <a class="cost__btn btn with-arrow border-arrow with-bg" href="#">Product Detail<span><i class="fas fa-chevron-right"></i></span></a>
+                    <a class="cost__btn btn whishlist" href="#"><i class='bx bx-heart' ></i>Add to wish list</a>
+                    <a class="product__btn btn with-bg" href="#">Buy Now</a>
+                  </div>
+                </div>
+              </div>
+            </li>
+            <li class="products__item product-box">
+              <div class="product-box__imgs">
+                <img class="product-box__img" src="" alt="">
+              </div>
+              <div class="product-box__about">
+                <div class="product-box__inner-box inner-box">
+                  <div class="inner-box__up">
+                    <p class="inner-box__title">Product title</p>
+                    <p class="inner-box__des">Space for a small product description </p>
+                    <div class="inner-box__rating">
+                      <span><i class='bx bxs-star' ></i></span>
+                      <span><i class='bx bxs-star' ></i></span>
+                      <span><i class='bx bx-star' ></i></span>
+                      <span><i class='bx bx-star' ></i></span>
+                      <span><i class='bx bx-star' ></i></span>
+                    </div>
+                  </div>
+                  <div class="inner-box__down">
+                    <ul class="inner-box__static-titles">
+                      <li class="inner-box__item"><p class="inner-box__static-title">Fresheness</p></li>
+                      <li class="inner-box__item"><p class="inner-box__static-title">Farm</p></li>
+                      <li class="inner-box__item"><p class="inner-box__static-title">Delivery</p></li>
+                      <li class="inner-box__item"><p class="inner-box__static-title">Stock</p></li>
+                    </ul>
+                    <ul class="inner-box__static-texts">
+                      <li class="inner-box__item"><p class="inner-box__static-text"><span>New</span> (Extra fresh)</p></li>
+                      <li class="inner-box__item"><p class="inner-box__static-text">Grocery Tarm Fields</p></li>
+                      <li class="inner-box__item"><p class="inner-box__static-text">Europe</p></li>
+                      <li class="inner-box__item"><p class="inner-box__static-text"><span>320 pcs</span></p></li>
+                    </ul>
+                  </div>
+                </div>
+                <div class="product-box__prices cost">
+                  <div class="cost__prices">
+                    <p class="cost__price">36.99 USD</p>
+                    <p class="cost__discount">48.56</p>
+                  </div>
+                  <div class="cost__shipping">
+                    <p class="cost__shipping-type">Free Shipping</p>
+                    <p class="cost__shipping-priod">Delivery in 1 day</p>
+                  </div>
+                  <div class="cost__btns">
+                    <a class="cost__btn btn with-arrow border-arrow with-bg" href="#">Product Detail<span><i class="fas fa-chevron-right"></i></span></a>
+                    <a class="cost__btn btn whishlist" href="#"><i class='bx bx-heart' ></i>Add to wish list</a>
+                    <a class="product__btn btn with-bg" href="#">Buy Now</a>
+                  </div>
+                </div>
+              </div>
+            </li>
+            <li class="products__item product-box">
+              <div class="product-box__imgs">
+                <img class="product-box__img" src="" alt="">
+              </div>
+              <div class="product-box__about">
+                <div class="product-box__inner-box inner-box">
+                  <div class="inner-box__up">
+                    <p class="inner-box__title">Product title</p>
+                    <p class="inner-box__des">Space for a small product description </p>
+                    <div class="inner-box__rating">
+                      <span><i class='bx bxs-star' ></i></span>
+                      <span><i class='bx bxs-star' ></i></span>
+                      <span><i class='bx bx-star' ></i></span>
+                      <span><i class='bx bx-star' ></i></span>
+                      <span><i class='bx bx-star' ></i></span>
+                    </div>
+                  </div>
+                  <div class="inner-box__down">
+                    <ul class="inner-box__static-titles">
+                      <li class="inner-box__item"><p class="inner-box__static-title">Fresheness</p></li>
+                      <li class="inner-box__item"><p class="inner-box__static-title">Farm</p></li>
+                      <li class="inner-box__item"><p class="inner-box__static-title">Delivery</p></li>
+                      <li class="inner-box__item"><p class="inner-box__static-title">Stock</p></li>
+                    </ul>
+                    <ul class="inner-box__static-texts">
+                      <li class="inner-box__item"><p class="inner-box__static-text"><span>New</span> (Extra fresh)</p></li>
+                      <li class="inner-box__item"><p class="inner-box__static-text">Grocery Tarm Fields</p></li>
+                      <li class="inner-box__item"><p class="inner-box__static-text">Europe</p></li>
+                      <li class="inner-box__item"><p class="inner-box__static-text"><span>320 pcs</span></p></li>
+                    </ul>
+                  </div>
+                </div>
+                <div class="product-box__prices cost">
+                  <div class="cost__prices">
+                    <p class="cost__price">36.99 USD</p>
+                    <p class="cost__discount">48.56</p>
+                  </div>
+                  <div class="cost__shipping">
+                    <p class="cost__shipping-type">Free Shipping</p>
+                    <p class="cost__shipping-priod">Delivery in 1 day</p>
+                  </div>
+                  <div class="cost__btns">
+                    <a class="cost__btn btn with-arrow border-arrow with-bg" href="#">Product Detail<span><i class="fas fa-chevron-right"></i></span></a>
+                    <a class="cost__btn btn whishlist" href="#"><i class='bx bx-heart' ></i>Add to wish list</a>
+                    <a class="product__btn btn with-bg" href="#">Buy Now</a>
+                  </div>
+                </div>
+              </div>
+            </li>
+            <li class="products__item product-box">
+              <div class="product-box__imgs">
+                <img class="product-box__img" src="" alt="">
+              </div>
+              <div class="product-box__about">
+                <div class="product-box__inner-box inner-box">
+                  <div class="inner-box__up">
+                    <p class="inner-box__title">Product title</p>
+                    <p class="inner-box__des">Space for a small product description </p>
+                    <div class="inner-box__rating">
+                      <span><i class='bx bxs-star' ></i></span>
+                      <span><i class='bx bxs-star' ></i></span>
+                      <span><i class='bx bx-star' ></i></span>
+                      <span><i class='bx bx-star' ></i></span>
+                      <span><i class='bx bx-star' ></i></span>
+                    </div>
+                  </div>
+                  <div class="inner-box__down">
+                    <ul class="inner-box__static-titles">
+                      <li class="inner-box__item"><p class="inner-box__static-title">Fresheness</p></li>
+                      <li class="inner-box__item"><p class="inner-box__static-title">Farm</p></li>
+                      <li class="inner-box__item"><p class="inner-box__static-title">Delivery</p></li>
+                      <li class="inner-box__item"><p class="inner-box__static-title">Stock</p></li>
+                    </ul>
+                    <ul class="inner-box__static-texts">
+                      <li class="inner-box__item"><p class="inner-box__static-text"><span>New</span> (Extra fresh)</p></li>
+                      <li class="inner-box__item"><p class="inner-box__static-text">Grocery Tarm Fields</p></li>
+                      <li class="inner-box__item"><p class="inner-box__static-text">Europe</p></li>
+                      <li class="inner-box__item"><p class="inner-box__static-text"><span>320 pcs</span></p></li>
+                    </ul>
+                  </div>
+                </div>
+                <div class="product-box__prices cost">
+                  <div class="cost__prices">
+                    <p class="cost__price">36.99 USD</p>
+                    <p class="cost__discount">48.56</p>
+                  </div>
+                  <div class="cost__shipping">
+                    <p class="cost__shipping-type">Free Shipping</p>
+                    <p class="cost__shipping-priod">Delivery in 1 day</p>
+                  </div>
+                  <div class="cost__btns">
+                    <a class="cost__btn btn with-arrow border-arrow with-bg" href="#">Product Detail<span><i class="fas fa-chevron-right"></i></span></a>
+                    <a class="cost__btn btn whishlist" href="#"><i class='bx bx-heart' ></i>Add to wish list</a>
+                    <a class="product__btn btn with-bg" href="#">Buy Now</a>
+                  </div>
+                </div>
+              </div>
+            </li>
+            <li class="products__item product-box">
+              <div class="product-box__imgs">
+                <img class="product-box__img" src="" alt="">
+              </div>
+              <div class="product-box__about">
+                <div class="product-box__inner-box inner-box">
+                  <div class="inner-box__up">
+                    <p class="inner-box__title">Product title</p>
+                    <p class="inner-box__des">Space for a small product description </p>
+                    <div class="inner-box__rating">
+                      <span><i class='bx bxs-star' ></i></span>
+                      <span><i class='bx bxs-star' ></i></span>
+                      <span><i class='bx bx-star' ></i></span>
+                      <span><i class='bx bx-star' ></i></span>
+                      <span><i class='bx bx-star' ></i></span>
+                    </div>
+                  </div>
+                  <div class="inner-box__down">
+                    <ul class="inner-box__static-titles">
+                      <li class="inner-box__item"><p class="inner-box__static-title">Fresheness</p></li>
+                      <li class="inner-box__item"><p class="inner-box__static-title">Farm</p></li>
+                      <li class="inner-box__item"><p class="inner-box__static-title">Delivery</p></li>
+                      <li class="inner-box__item"><p class="inner-box__static-title">Stock</p></li>
+                    </ul>
+                    <ul class="inner-box__static-texts">
+                      <li class="inner-box__item"><p class="inner-box__static-text"><span>New</span> (Extra fresh)</p></li>
+                      <li class="inner-box__item"><p class="inner-box__static-text">Grocery Tarm Fields</p></li>
+                      <li class="inner-box__item"><p class="inner-box__static-text">Europe</p></li>
+                      <li class="inner-box__item"><p class="inner-box__static-text"><span>320 pcs</span></p></li>
+                    </ul>
+                  </div>
+                </div>
+                <div class="product-box__prices cost">
+                  <div class="cost__prices">
+                    <p class="cost__price">36.99 USD</p>
+                    <p class="cost__discount">48.56</p>
+                  </div>
+                  <div class="cost__shipping">
+                    <p class="cost__shipping-type">Free Shipping</p>
+                    <p class="cost__shipping-priod">Delivery in 1 day</p>
+                  </div>
+                  <div class="cost__btns">
+                    <a class="cost__btn btn with-arrow border-arrow with-bg" href="#">Product Detail<span><i class="fas fa-chevron-right"></i></span></a>
+                    <a class="cost__btn btn whishlist" href="#"><i class='bx bx-heart' ></i>Add to wish list</a>
+                    <a class="product__btn btn with-bg" href="#">Buy Now</a>
+                  </div>
+                </div>
+              </div>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </section>
   </main>
   <script src="js/main.js"></script>
 </body>

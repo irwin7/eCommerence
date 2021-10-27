@@ -5,19 +5,10 @@
   border: 2px solid transparent;
   border-radius: 12px;
   text-decoration: none;
-}
-
-.with-bg{
-  background-color: $color-primary;
-  border-color: #46760a;
+  cursor: pointer;
   padding: 6.5px 16px;
-  color: $white;
-
-  &:hover{
-    color: $color-primary;
-    background-color: $bg-color;
-  }
 }
+
 .with-arrow{
   padding: 13px 16px;
   background-color: $color-f5;
@@ -45,6 +36,17 @@
   span{
     color: $color-primary;
   }
+  &:hover{
+    color: $color-primary;
+    background-color: $bg-color;
+  }
+}
+.with-bg{
+  background-color: $color-primary;
+  border-color: #46760a;
+  padding: 6.5px 16px;
+  color: $white;
+
   &:hover{
     color: $color-primary;
     background-color: $bg-color;
