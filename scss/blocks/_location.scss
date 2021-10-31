@@ -1,0 +1,23 @@
+.location {
+  @include flex-center(start);
+
+  &__item {
+
+    &:not(:last-child) a{
+      color: $color-a9;
+      margin-right: 8px;
+    }
+    &:not(:last-child)::after{
+        content: "/";
+        display: inline-block;
+        margin-right: 8px;
+        @include text-blvk;
+        color: $color-d1;
+    }
+  }
+      
+  &__link {
+    @include text-blvk;
+    text-decoration: none;
+  }
+}

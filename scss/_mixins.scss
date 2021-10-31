@@ -14,10 +14,6 @@
   line-height: 16px;
   color: $color-primary;
   @include trans;
-
-  &:hover{
-    color: $color-norm-black;
-  }
 }
 
 @mixin text-grn-bold {

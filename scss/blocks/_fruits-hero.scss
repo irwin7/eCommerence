@@ -17,28 +17,6 @@
   .active.list::before{
     background-image: url("../../media/img/sections-active.svg");
   }
-  &__location {
-    @include flex-center(start);
-  }
-  &__location-item {
-
-    &:not(:last-child) a{
-      color: $color-a9;
-      margin-right: 8px;
-    }
-    &:not(:last-child)::after{
-        content: "/";
-        display: inline-block;
-        margin-right: 8px;
-        @include text-blvk;
-        color: $color-d1;
-    }
-  }
-      
-  &__location-link {
-    @include text-blvk;
-    text-decoration: none;
-  }
   &__up {
     @include flex-center(space-between);
     padding: 8px 0;

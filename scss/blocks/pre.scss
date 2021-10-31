@@ -1,0 +1,23 @@
+.pre {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-flow: row wrap;
+  margin-bottom: 32px;
+
+  &__title {
+    @include text-semi;
+  }
+  &__btn {
+    display: flex;
+    align-items: center;
+    padding: 6px 12px;
+    @include text-grn-bold;
+    color: $color-norm-black;
+    text-decoration: none;
+
+    i{
+      color: $color-primary;
+    }
+  }
+}
